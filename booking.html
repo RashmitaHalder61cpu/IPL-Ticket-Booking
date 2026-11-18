@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book IPL Tickets</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <header class="navbar">
+
+        <div class="logo">IPL 2026</div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About IPL</a>
+            <a href="index.html#matches">Matches</a>
+            <a href="booking.html">Book Ticket</a>
+            <a href="index.html#my-bookings">My Bookings</a>
+            <a href="index.html#guidelines">Guidelines</a>
+        </nav>
+
+    </header>
+
+
+    <!-- BOOKING FORM -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">IPL 2026</p>
+
+            <h1>Book Your IPL Tickets</h1>
+
+            <p>
+                Fill in your details to book your favourite match.
+            </p>
+
+        </div>
+
+
+        <form id="bookingForm" class="card">
+
+            <div class="form-group">
+
+                <label for="name">Full Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    minlength="3"
+                    maxlength="40"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="phone">Phone Number</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    pattern="[0-9]{10}"
+                    title="Enter exactly 10 digits"
+                    placeholder="Enter 10-digit phone number"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="match">Select Match</label>
+
+                <select id="match" required>
+
+                    <option value="">Choose a match</option>
+                    <option value="CSK vs MI">CSK vs MI</option>
+                    <option value="RCB vs KKR">RCB vs KKR</option>
+                    <option value="MI vs RCB">MI vs RCB</option>
+                    <option value="CSK vs KKR">CSK vs KKR</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="stand">Stand Category</label>
+
+                <select id="stand" required>
+
+                    <option value="">Choose a stand</option>
+                    <option value="General">General</option>
+                    <option value="Premium">Premium</option>
+                    <option value="VIP">VIP</option>
+                    <option value="Corporate">Corporate</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="tickets">Number of Tickets</label>
+
+                <input
+                    type="number"
+                    id="tickets"
+                    min="1"
+                    max="10"
+                    placeholder="Enter number of tickets"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <p><strong>Match Preference</strong></p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="preference"
+                        value="Day Match"
+                        required
+                    >
+                    Day Match
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="preference"
+                        value="Night Match"
+                    >
+                    Night Match
+                </label>
+
+            </div>
+
+
+            <button type="submit" class="btn btn-gold">
+                Confirm Booking
+            </button>
+
+            <button type="reset" class="btn btn-outline">
+                Reset
+            </button>
+
+        </form>
+
+
+        <p
+            id="message"
+            style="text-align:center; margin-top:20px; font-weight:bold;"
+        ></p>
+
+    </section>
+
+
+    <!-- BOOKING JAVASCRIPT -->
+
+    <script>
+
+        document.getElementById("bookingForm").addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+                // GET FORM DETAILS
+
+                const booking = {
+
+                    id: Date.now(),
+
+                    name: document.getElementById("name").value.trim(),
+
+                    email: document.getElementById("email").value.trim(),
+
+                    phone: document.getElementById("phone").value.trim(),
+
+                    match: document.getElementById("match").value,
+
+                    stand: document.getElementById("stand").value,
+
+                    tickets: document.getElementById("tickets").value,
+
+                    preference: document.querySelector(
+                        'input[name="preference"]:checked'
+                    ).value
+
+                };
+
+
+                // GET EXISTING BOOKINGS
+
+                let bookings = JSON.parse(
+                    localStorage.getItem("iplBookings")
+                ) || [];
+
+
+                // ADD NEW BOOKING
+
+                bookings.push(booking);
+
+
+                // SAVE BOOKINGS
+
+                localStorage.setItem(
+                    "iplBookings",
+                    JSON.stringify(bookings)
+                );
+
+
+                // SUCCESS MESSAGE
+
+                document.getElementById("message").textContent =
+                    "Booking Successful! Your tickets have been saved.";
+
+
+                // RESET FORM
+
+                this.reset();
+
+            }
+
+        );
+
+    </script>
+
+</body>
+
+</html>
