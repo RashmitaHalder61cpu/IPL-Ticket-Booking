@@ -1,0 +1,155 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #222;
+}
+
+
+/* Header */
+header {
+    background-color: #071d49;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+
+/* Main Section */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+
+/* Booking Form */
+.booking-section {
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.booking-section h2 {
+    color: #071d49;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+select,
+input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+
+/* Booking Summary */
+.summary-card {
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.summary-card h2 {
+    color: #071d49;
+    margin-bottom: 20px;
+}
+
+.summary-card p {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.summary-card h3 {
+    margin-top: 20px;
+    color: #071d49;
+    font-size: 22px;
+}
+
+#totalPrice {
+    color: #e9a400;
+}
+
+hr {
+    margin-top: 20px;
+}
+
+
+/* Toast Notification */
+#toast {
+    visibility: hidden;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #071d49;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    z-index: 1000;
+    text-align: center;
+}
+
+#toast.show {
+    visibility: visible;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #071d49;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    .booking-section,
+    .summary-card {
+        width: 100%;
+    }
+
+}

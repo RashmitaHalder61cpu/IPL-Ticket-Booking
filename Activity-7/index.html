@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IPL Booking - Activity 7</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>IPL Ticket Booking</h1>
+        <p>Select your match and ticket category</p>
+    </header>
+
+    <main>
+
+        <!-- Booking Form -->
+        <section class="booking-section">
+
+            <h2>Book Your Tickets</h2>
+
+            <form id="bookingForm">
+
+                <label for="match">Select Match:</label>
+
+                <select id="match" required>
+                    <option value="">Choose a match</option>
+                    <option value="RCB vs CSK">RCB vs CSK</option>
+                    <option value="MI vs KKR">MI vs KKR</option>
+                    <option value="SRH vs RR">SRH vs RR</option>
+                </select>
+
+
+                <label for="stand">Select Stand Category:</label>
+
+                <select id="stand" required>
+                    <option value="">Choose a category</option>
+                    <option value="General">General - ₹500</option>
+                    <option value="Premium">Premium - ₹1500</option>
+                    <option value="VIP">VIP - ₹3000</option>
+                </select>
+
+
+                <label for="quantity">Number of Tickets:</label>
+
+                <input
+                    type="number"
+                    id="quantity"
+                    min="1"
+                    max="10"
+                    value="1"
+                    required
+                >
+
+            </form>
+
+        </section>
+
+
+        <!-- Booking Summary Card -->
+        <section class="summary-card">
+
+            <h2>Booking Summary</h2>
+
+            <p>
+                <strong>Match:</strong>
+                <span id="summaryMatch">Not selected</span>
+            </p>
+
+            <p>
+                <strong>Stand Category:</strong>
+                <span id="summaryStand">Not selected</span>
+            </p>
+
+            <p>
+                <strong>Ticket Quantity:</strong>
+                <span id="summaryQuantity">0</span>
+            </p>
+
+            <p>
+                <strong>Price per Ticket:</strong>
+                <span id="summaryPrice">₹0</span>
+            </p>
+
+            <hr>
+
+            <h3>
+                Total Price:
+                <span id="totalPrice">₹0</span>
+            </h3>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>IPL Ticket Booking | Activity 7</p>
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
