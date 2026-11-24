@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IPL Ticket Booking - Activity 8</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">IPL <span>2026</span></div>
+
+        <!-- Hamburger Button -->
+        <button class="hamburger" id="hamburger">
+            ☰
+        </button>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#matches">Matches</a>
+            <a href="#guidelines">Guidelines</a>
+            <a href="#booking">Book Tickets</a>
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <h1>Experience the Stadium Energy Live!</h1>
+
+        <p>Book your IPL tickets and support your favourite team.</p>
+
+        <a href="#matches" class="button">Explore Matches</a>
+
+    </section>
+
+    <!-- Match Schedule -->
+    <section class="section" id="matches">
+
+        <h2>Upcoming Matches</h2>
+
+        <!-- Filter and View Controls -->
+        <div class="controls">
+
+            <label for="teamFilter">Filter by Team:</label>
+
+            <select id="teamFilter">
+                <option value="all">All Teams</option>
+                <option value="RCB">RCB</option>
+                <option value="CSK">CSK</option>
+                <option value="MI">MI</option>
+                <option value="KKR">KKR</option>
+                <option value="SRH">SRH</option>
+                <option value="RR">RR</option>
+            </select>
+
+            <button id="viewToggle" class="button secondary">
+                Switch to List View
+            </button>
+
+        </div>
+
+        <!-- Match Cards -->
+        <div class="match-container grid-view" id="matchContainer">
+
+            <div class="match-card" data-team="RCB CSK">
+                <h3>RCB vs CSK</h3>
+                <p>25 November 2026</p>
+                <p>Bengaluru</p>
+                <p class="price">Starting from ₹500</p>
+                <a href="#booking" class="button">Book Ticket</a>
+            </div>
+
+            <div class="match-card" data-team="MI KKR">
+                <h3>MI vs KKR</h3>
+                <p>26 November 2026</p>
+                <p>Mumbai</p>
+                <p class="price">Starting from ₹700</p>
+                <a href="#booking" class="button">Book Ticket</a>
+            </div>
+
+            <div class="match-card" data-team="SRH RR">
+                <h3>SRH vs RR</h3>
+                <p>27 November 2026</p>
+                <p>Hyderabad</p>
+                <p class="price">Starting from ₹600</p>
+                <a href="#booking" class="button">Book Ticket</a>
+            </div>
+
+            <div class="match-card" data-team="CSK MI">
+                <h3>CSK vs MI</h3>
+                <p>28 November 2026</p>
+                <p>Chennai</p>
+                <p class="price">Starting from ₹800</p>
+                <a href="#booking" class="button">Book Ticket</a>
+            </div>
+
+            <div class="match-card" data-team="KKR RCB">
+                <h3>KKR vs RCB</h3>
+                <p>29 November 2026</p>
+                <p>Kolkata</p>
+                <p class="price">Starting from ₹500</p>
+                <a href="#booking" class="button">Book Ticket</a>
+            </div>
+
+            <div class="match-card" data-team="RR SRH">
+                <h3>RR vs SRH</h3>
+                <p>30 November 2026</p>
+                <p>Jaipur</p>
+                <p class="price">Starting from ₹600</p>
+                <a href="#booking" class="button">Book Ticket</a>
+            </div>
+
+        </div>
+
+        <p id="noMatches" class="no-matches" hidden>
+            No matches found for this team.
+        </p>
+
+    </section>
+
+    <!-- Guidelines -->
+    <section class="section guidelines" id="guidelines">
+
+        <h2>Booking Guidelines</h2>
+
+        <div class="guideline-container">
+
+            <div class="guideline-card">
+                <h3>Ticket Booking</h3>
+                <p>Select your match and preferred stand before booking.</p>
+            </div>
+
+            <div class="guideline-card">
+                <h3>Payment</h3>
+                <p>Check your booking details and total amount before payment.</p>
+            </div>
+
+            <div class="guideline-card">
+                <h3>Stadium Rules</h3>
+                <p>Carry your ticket and follow stadium entry rules.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Booking Section -->
+    <section class="section booking" id="booking">
+
+        <h2>Book Your Tickets</h2>
+
+        <p>Choose your favourite match and enjoy the IPL experience!</p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 IPL Ticket Booking | Activity 8</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
