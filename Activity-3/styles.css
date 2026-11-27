@@ -1,0 +1,386 @@
+/* CSS Variables */
+:root {
+    --primary: #0b2357;
+    --secondary: #1759a6;
+    --accent: #ffcf40;
+    --background: #f4f6fb;
+    --text: #222222;
+    --white: #ffffff;
+    --light-blue: #e8efff;
+}
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 500px;
+    margin-top: 65px;
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--primary);
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* General Sections */
+.section {
+    padding: 60px 8%;
+    text-align: center;
+    scroll-margin-top: 80px;
+}
+
+.section h2 {
+    color: var(--primary);
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.section-intro {
+    max-width: 800px;
+    margin: 0 auto 35px;
+}
+
+/* Cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--secondary);
+    margin-bottom: 12px;
+}
+
+/* Matches Section */
+.matches-section {
+    background-color: var(--light-blue);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:hover {
+    background-color: #f0f4ff;
+}
+
+/* Table Button */
+.table-btn {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 7px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.table-btn:hover {
+    background-color: var(--primary);
+}
+
+/* Center Button */
+.center-button {
+    margin-top: 30px;
+}
+
+/* Booking Card */
+.booking-card {
+    max-width: 650px;
+    margin: auto;
+    background-color: var(--white);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.booking-card h3 {
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.booking-card p {
+    margin-bottom: 25px;
+}
+
+/* Guidelines */
+.guidelines-section {
+    background-color: var(--light-blue);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* Booking Form */
+.booking-container {
+    max-width: 650px;
+    margin: 110px auto 40px;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.booking-container h1 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.booking-container > p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: 2px solid var(--secondary);
+    border-color: var(--secondary);
+}
+
+/* Radio Buttons */
+.radio-group label {
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 15px;
+}
+
+.radio-group input {
+    width: auto;
+}
+
+/* Form Buttons */
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.button-group button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.reset-btn {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+.button-group button:hover {
+    opacity: 0.85;
+}
+
+/* Back Link */
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        position: relative;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        margin-top: 0;
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 40px 5%;
+    }
+
+    .booking-container {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
